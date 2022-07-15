@@ -1,11 +1,30 @@
 // Dependencies
-import React from "react";
+import React, {useContext, useEffect, useState} from "react";
 // Files
-import styles from "./Skills.module.css";
+import ThemeContext from "../../contexts/ThemeContext";
+import LanguageContext from "../../contexts/LanguageContext";
+import lightStyles from "./LightSkills.module.css";
+import darkStyles from "./DarkSkills.module.css";
 
 
 function Skills()
 {
+    const {language} = useContext(LanguageContext);
+    const {theme} = useContext(ThemeContext);
+    
+    const [styles, setStyles] = useState(theme === "Light" ? lightStyles : darkStyles);
+    
+    useEffect(() => {
+        if(theme === "Light")
+        {
+            setStyles(lightStyles);
+        }
+        else if(theme === "Dark")
+        {
+            setStyles(darkStyles);
+        };
+    }, [theme]);
+    
     return (
         <div className={styles.Container}>
             <h2 className={styles.Title}>MAIN SKILLS</h2>

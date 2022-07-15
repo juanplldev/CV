@@ -5,7 +5,7 @@ const Context = React.createContext({});
 
 export function ThemeContext({children})
 {
-    const localTheme = window.localStorage.getItem("Theme") ? window.localStorage.getItem("Theme") : "Dark";
+    const localTheme = window.localStorage.getItem("Theme") ? window.localStorage.getItem("Theme") : "Light";
     const [theme, setTheme] = useState(localTheme);
     
     return(

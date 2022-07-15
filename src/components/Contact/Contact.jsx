@@ -1,15 +1,34 @@
 // Dependencies
-import React from "react";
+import React, {useContext, useEffect, useState} from "react";
 import {BiMap} from "react-icons/bi";
 import {FiMail} from "react-icons/fi";
 import {FaWhatsapp} from "react-icons/fa";
 import {BsLinkedin, BsGithub, BsBriefcase} from "react-icons/bs";
 // Files
-import styles from "./Contact.module.css";
+import ThemeContext from "../../contexts/ThemeContext";
+import LanguageContext from "../../contexts/LanguageContext";
+import lightStyles from "./LightContact.module.css";
+import darkStyles from "./DarkContact.module.css";
 
 
 function Contact()
 {
+    const {language} = useContext(LanguageContext);
+    const {theme} = useContext(ThemeContext);
+    
+    const [styles, setStyles] = useState(theme === "Light" ? lightStyles : darkStyles);
+    
+    useEffect(() => {
+        if(theme === "Light")
+        {
+            setStyles(lightStyles);
+        }
+        else if(theme === "Dark")
+        {
+            setStyles(darkStyles);
+        };
+    }, [theme]);
+    
     return (
         <div className={styles.Container}>
             <h3 className={styles.Title}>CONTACT</h3>

@@ -1,11 +1,30 @@
 // Dependencies
-import React from "react";
+import React, {useContext, useEffect, useState} from "react";
 // Files
-import styles from "./Education.module.css";
+import ThemeContext from "../../contexts/ThemeContext";
+import LanguageContext from "../../contexts/LanguageContext";
+import lightStyles from "./LightEducation.module.css";
+import darkStyles from "./DarkEducation.module.css";
 
 
 function Education()
 {
+    const {language} = useContext(LanguageContext);
+    const {theme} = useContext(ThemeContext);
+    
+    const [styles, setStyles] = useState(theme === "Light" ? lightStyles : darkStyles);
+    
+    useEffect(() => {
+        if(theme === "Light")
+        {
+            setStyles(lightStyles);
+        }
+        else if(theme === "Dark")
+        {
+            setStyles(darkStyles);
+        };
+    }, [theme]);
+    
     return (
         <div className={styles.Container}>
             <h3 className={styles.Title}>EDUCATION</h3>

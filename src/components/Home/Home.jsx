@@ -1,7 +1,6 @@
 // Dependencies
-import React from "react";
+import React, {useContext, useEffect, useState} from "react";
 // Files
-import styles from "./Home.module.css";
 import Header from "../Header/Header";
 import Contact from "../Contact/Contact";
 import Education from "../Education/Education";
@@ -11,10 +10,31 @@ import Experience from "../Experience/Experience";
 import Certificates from "../Certificates/Certificates";
 import Skills from "../Skills/Skills";
 import Interests from "../Interests/Interests";
+import ThemeContext from "../../contexts/ThemeContext";
+import {scrollToTop} from "../../handlers/handlers";
+import {AiOutlineArrowUp} from "react-icons/ai";
+import lightStyles from "./LightHome.module.css";
+import darkStyles from "./DarkHome.module.css";
 
 
 function Home()
 {
+    const {theme} = useContext(ThemeContext);
+    const [styles, setStyles] = useState(theme === "Light" ? lightStyles : darkStyles);
+    
+    useEffect(() => {
+        if(theme === "Light")
+        {
+            setStyles(lightStyles);
+            document.body.classList.remove("BodyDarkTheme");
+        }
+        else if(theme === "Dark")
+        {
+            setStyles(darkStyles);
+            document.body.classList.add("BodyDarkTheme");
+        };
+    }, [theme]);
+    
     return (
         <div className={styles.Container}>
             <div className={styles.LeftSide}>
@@ -31,6 +51,10 @@ function Home()
                 <Certificates/>
                 <Skills/>
             </div>
+            
+            <button onClick={scrollToTop} className={styles.ArrowButton}>
+                <AiOutlineArrowUp/>
+            </button>
         </div>
     );
 };

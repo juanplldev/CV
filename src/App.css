@@ -18,3 +18,13 @@ body
   background: #fff;
   color: rgb(45, 45, 45);
 }
+
+.BodyDarkTheme
+{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: #2b2b2b;
+  color: rgb(210, 210, 210);
+}

@@ -1,11 +1,30 @@
 // Dependencies
-import React from "react";
+import React, {useContext, useEffect, useState} from "react";
 // Files
-import styles from "./Profile.module.css";
+import ThemeContext from "../../contexts/ThemeContext";
+import LanguageContext from "../../contexts/LanguageContext";
+import lightStyles from "./LightProfile.module.css";
+import darkStyles from "./DarkProfile.module.css";
 
 
 function Profile()
 {
+    const {language} = useContext(LanguageContext);
+    const {theme} = useContext(ThemeContext);
+    
+    const [styles, setStyles] = useState(theme === "Light" ? lightStyles : darkStyles);
+    
+    useEffect(() => {
+        if(theme === "Light")
+        {
+            setStyles(lightStyles);
+        }
+        else if(theme === "Dark")
+        {
+            setStyles(darkStyles);
+        };
+    }, [theme]);
+    
     return (
         <div className={styles.Container}>
             <h2 className={styles.Title}>PROFILE</h2>

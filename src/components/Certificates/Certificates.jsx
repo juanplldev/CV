@@ -1,12 +1,31 @@
 // Dependencies
-import React from "react";
+import React, {useContext, useEffect, useState} from "react";
 // Files
+import ThemeContext from "../../contexts/ThemeContext";
+import LanguageContext from "../../contexts/LanguageContext";
 import {BsArrowRightShort} from "react-icons/bs"
-import styles from "./Certificates.module.css";
+import lightStyles from "./LightCertificates.module.css";
+import darkStyles from "./DarkCertificates.module.css";
 
 
 function Certificates()
 {
+    const {language} = useContext(LanguageContext);
+    const {theme} = useContext(ThemeContext);
+    
+    const [styles, setStyles] = useState(theme === "Light" ? lightStyles : darkStyles);
+    
+    useEffect(() => {
+        if(theme === "Light")
+        {
+            setStyles(lightStyles);
+        }
+        else if(theme === "Dark")
+        {
+            setStyles(darkStyles);
+        };
+    }, [theme]);
+    
     return (
         <div className={styles.Container}>
             <h2 className={styles.Title}>CERTIFICATES</h2>

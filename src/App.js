@@ -2,16 +2,23 @@
 import React from "react";
 import {Route, Routes} from "react-router-dom";
 // Files
+import Home from "./components/Home/Home.jsx";
+import {ThemeContext} from "./contexts/ThemeContext.jsx";
+import {LanguageContext} from "./contexts/LanguageContext.jsx";
 import "./App.css";
-import Home from "./components/Home/Home";
+
 
 function App()
 {
     return (
         <React.Fragment>
-            <Routes>
-                <Route exact path="/" element={<Home/>} />
-            </Routes>
+            <ThemeContext>
+                <LanguageContext>
+                    <Routes>
+                        <Route exact path="/" element={<Home/>} />
+                    </Routes>
+                </LanguageContext>
+            </ThemeContext>
         </React.Fragment>
     );
 };
