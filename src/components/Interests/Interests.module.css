@@ -1,0 +1,61 @@
+.Container
+{
+    width: auto;
+    height: auto;
+    padding-top: 40px;
+}
+
+.Title
+{
+    letter-spacing: 5px;
+    margin-bottom: 20px;
+    color: #000;
+}
+
+.Container ul
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.Container li
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: fit-content;
+    height: fit-content;
+    list-style: none;
+    font-size: 15px;
+    font-weight: 300;
+}
+
+.Container li svg
+{
+    width: 27px;
+    height: 27px;
+    color: rgb(60, 60, 60);
+    transition: 0.2s;
+}
+
+.Container li svg:hover
+{
+    color: #000;
+}
+
+@media (max-width: 1000px)
+{
+    .Container ul
+    {
+        justify-content: flex-start;
+    }
+    .Container li
+    {
+        margin-right: 30px;
+    }
+    .Container li:nth-last-child(1)
+    {
+        margin: 0;
+    }
+}
