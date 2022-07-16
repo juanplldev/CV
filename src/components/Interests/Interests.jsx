@@ -30,27 +30,57 @@ function Interests()
     
     return (
         <div className={styles.Container}>
-            <h3 className={styles.Title}>INTERESTS</h3>
+            <h3 className={styles.Title}>
+                {
+                    language === "English" ? "INTERESTS"
+                    :
+                    "INTERESES"
+                }
+            </h3>
             
             <ul>
                 <li>
                     <BsLaptop/>
-                    <span>IT/CS</span>
+                    <span>
+                        {
+                            language === "English" ? "IT/CS"
+                            :
+                            "TI/CC"
+                        }
+                    </span>
                 </li>
                 
                 <li>
                     <BiHeadphone/>
-                    <span>Music</span>
+                    <span>
+                        {
+                            language === "English" ? "Music"
+                            :
+                            "Música"
+                        }
+                    </span>
                 </li>
                 
                 <li>
                     <FaGuitar/>
-                    <span>Guitar</span>
+                    <span>
+                        {
+                            language === "English" ? "Guitar"
+                            :
+                            "Guitarra"
+                        }
+                    </span>
                 </li>
                 
                 <li>
                     <BiBook/>
-                    <span>Read</span>
+                    <span>
+                        {
+                            language === "English" ? "Read"
+                            :
+                            "Leer"
+                        }
+                    </span>
                 </li>
             </ul>
         </div>

@@ -27,17 +27,47 @@ function Languages()
     
     return (
         <div className={styles.Container}>
-            <h3 className={styles.Title}>LANGUAGES</h3>
+            <h3 className={styles.Title}>
+                {
+                    language === "English" ? "LANGUAGES"
+                    :
+                    "IDIOMAS"
+                }
+            </h3>
             
             <ul>
                 <li>
-                    <span className={styles.Language}>Spanish: </span>
-                    <span className={styles.Level}>Native</span>
+                    <span className={styles.Language}>
+                        {
+                            language === "English" ? "Spanish: "
+                            :
+                            "Español: "
+                        }
+                    </span>
+                    <span className={styles.Level}>
+                        {
+                            language === "English" ? "Native."
+                            :
+                            "Nativo."
+                        }
+                    </span>
                 </li>
                 
                 <li>
-                    <span className={styles.Language}>English: </span>
-                    <span className={styles.Level}>Intermediate</span>
+                    <span className={styles.Language}>
+                        {
+                            language === "English" ? "English: "
+                            :
+                            "Inglés: "
+                        }
+                    </span>
+                    <span className={styles.Level}>
+                        {
+                            language === "English" ? "Intermediate."
+                            :
+                            "Intermedio."
+                        }
+                    </span>
                 </li>
             </ul>
         </div>

@@ -27,54 +27,134 @@ function Experience()
     
     return (
         <div className={styles.Container}>
-            <h2 className={styles.Title}>EXPERIENCE</h2>
+            <h2 className={styles.Title}>
+                {
+                    language === "English" ? "EXPERIENCE"
+                    :
+                    "EXPERIENCIA"
+                }
+            </h2>
             
             <div className={styles.Job}>
-                <h3>Full Stack Web Developer</h3>
+                <h3>
+                    {
+                        language === "English" ? "Full Stack Web Developer"
+                        :
+                        "Desarrollador Web Full Stack"
+                    }
+                </h3>
                 
                 <div className={styles.Details}>
                     <h4>Henry</h4>
-                    <h5>May 2022 - June 2022</h5>
+                    <h5>
+                        {
+                            language === "English" ? "May 2022 - June 2022"
+                            :
+                            "Mayo 2022 - Junio 2022"
+                        }
+                    </h5>
                 </div>
                 
                 <p>
-                    An digital art e-commerce with a small social network system.
+                    {
+                        language === "English" ? "An digital art e-commerce with a small social network system."
+                        :
+                        "Un comercio de arte digital con un toque de red social."
+                    }
                     <br />
-                    Made with six more co-workers as final project.
+                    {
+                        language === "English" ? "Made with six more co-workers as final project."
+                        :
+                        "Realizado con seis compañeros más, como proyecto final."
+                    }
                 </p>
             </div>
             
             <div className={styles.Job}>
-                <h3>Full Stack Web Developer</h3>
+                <h3>
+                    {
+                        language === "English" ? "Full Stack Web Developer"
+                        :
+                        "Desarrollador Web Full Stack"
+                    }
+                </h3>
                 
                 <div className={styles.Details}>
                     <h4>Henry</h4>
-                    <h5>April 2022 - May 2022</h5>
+                    <h5>
+                        {
+                            language === "English" ? "April 2022 - May 2022"
+                            :
+                            "Abril 2022 - Mayo 2022"
+                        }
+                    </h5>
                 </div>
                 
-                <p>A SPA (Single Page Application) of a video games encyclopedia.</p>
+                <p>
+                    {
+                        language === "English" ? "A SPA (Single Page Application) of a video games encyclopedia."
+                        :
+                        "Una aplicación de una sola página sobre una enciclopedia de videojuegos."
+                    }
+                </p>
             </div>
             
             <div className={styles.Job}>
-                <h3>DevOps</h3>
+                <h3>
+                    {
+                        language === "English" ? "DevOps"
+                        :
+                        "Desarrollo y Operaciones"
+                    }
+                </h3>
                 
                 <div className={styles.Details}>
                     <h4>ABEM</h4>
-                    <h5>March 2022 - April 2022</h5>
+                    <h5>
+                        {
+                            language === "English" ? "March 2022 - April 2022"
+                            :
+                            "Marzo 2022 - Abril 2022"
+                        }
+                    </h5>
                 </div>
                 
-                <p>Assembly of mining platforms and do their maintenance.</p>
+                <p>
+                    {
+                        language === "English" ? "Assembly of mining platforms and do their maintenance."
+                        :
+                        "Armado de rigs de minería y mantenimiento de los mismos."
+                    }
+                </p>
             </div>
             
             <div className={styles.Job}>
-                <h3>AutoCAD Draftsman</h3>
+                <h3>
+                    {
+                        language === "English" ? "AutoCAD Draftsman"
+                        :
+                        "Dibujante de AutoCAD"
+                    }
+                </h3>
                 
                 <div className={styles.Details}>
                     <h4>MT Arquitectura</h4>
-                    <h5>Sept. 2020 - August 2021</h5>
+                    <h5>
+                        {
+                            language === "English" ? "Sept. 2020 - August 2021"
+                            :
+                            "Sept. 2022 - Agosto 2022"
+                        }
+                    </h5>
                 </div>
                 
-                <p>Drawing of municipal plans.</p>
+                <p>
+                    {
+                        language === "English" ? "Drawing of municipal plans."
+                        :
+                        "Dibujado de planos municipales."
+                    }
+                </p>
             </div>
         </div>
     );

@@ -61,11 +61,16 @@
     font-weight: 600;
 }
 
+.Container a
+{
+    margin-top: 15px;
+    border-radius: 5px;
+}
+
 .DownloadButton
 {
     width: fit-content;
     height: fit-content;
-    margin-top: 15px;
     padding: 10px 15px;
     cursor: pointer;
     color: rgb(210, 210, 210);

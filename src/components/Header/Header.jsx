@@ -3,7 +3,7 @@ import React, {useContext, useEffect, useState} from "react";
 // Files
 import ThemeContext from "../../contexts/ThemeContext";
 import LanguageContext from "../../contexts/LanguageContext";
-import {IoLanguageOutline, IoMoonOutline} from "react-icons/io5";
+import {IoLanguageOutline, IoMoonOutline, IoSunnyOutline} from "react-icons/io5";
 import profileImg from "../../img/Profile Photo.jpeg";
 import lightStyles from "./LightHeader.module.css";
 import darkStyles from "./DarkHeader.module.css";
@@ -62,15 +62,34 @@ function Header()
                     <IoLanguageOutline/>
                 </button>
                 <button onClick={handleChangeTheme} className={styles.Button}>
-                    <IoMoonOutline/>
+                    {
+                        theme === "Light" ? <IoMoonOutline/>
+                        :
+                        <IoSunnyOutline/>
+                    }
                 </button>
             </div>
             
             <img src={profileImg} alt="" />
             <h2>Juan Pablo Llorente</h2>
-            <h4>Full Stack Web Developer</h4>
             
-            <button className={styles.DownloadButton}>Download</button>
+            <h4>
+                {
+                    language === "English" ? "Full Stack Web Developer"
+                    :
+                    "Desarrollador Web Full Stack"
+                }
+            </h4>
+            
+            <a href="" download={""}>
+                <button className={styles.DownloadButton}>
+                {
+                    language === "English" ? "Download"
+                    :
+                    "Descargar"
+                }
+                </button>
+            </a>
         </div>
     );
 };

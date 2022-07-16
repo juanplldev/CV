@@ -27,7 +27,13 @@ function Skills()
     
     return (
         <div className={styles.Container}>
-            <h2 className={styles.Title}>MAIN SKILLS</h2>
+            <h2 className={styles.Title}>
+                {
+                    language === "English" ? "MAIN SKILLS"
+                    :
+                    "HABILIDADES PRINCIPALES"
+                }
+            </h2>
             
             <ul>
                 <li>JavaScript</li>

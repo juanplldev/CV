@@ -31,7 +31,13 @@ function Contact()
     
     return (
         <div className={styles.Container}>
-            <h3 className={styles.Title}>CONTACT</h3>
+            <h3 className={styles.Title}>
+                {
+                    language === "English" ? "CONTACT"
+                    :
+                    "CONTACTO"
+                }
+            </h3>
             
             <ul>
                 <li>
@@ -84,7 +90,13 @@ function Contact()
                         <a href="https://juanpablollorente.vercel.app"><BsBriefcase/></a>
                     </span>
                     <span className={styles.Text}>
-                        <a href="https://juanpablollorente.vercel.app">Portfolio</a>
+                        <a href="https://juanpablollorente.vercel.app">
+                            {
+                                language === "English" ? "Portfolio"
+                                :
+                                "Portafolio"
+                            }
+                        </a>
                     </span>
                 </li>
             </ul>
