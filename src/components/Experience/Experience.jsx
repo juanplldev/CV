@@ -143,7 +143,7 @@ function Experience()
                         {
                             language === "English" ? "Sept. 2020 - August 2021"
                             :
-                            "Sept. 2022 - Agosto 2022"
+                            "Sept. 2020 - Agosto 2021"
                         }
                     </h5>
                 </div>

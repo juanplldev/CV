@@ -16,6 +16,13 @@ function Header()
     
     const [styles, setStyles] = useState(theme === "Light" ? lightStyles : darkStyles);
     
+    const titles =
+    {
+        language: language === "English" ? "Change language" : "Cambiar idioma",
+        theme: language === "English" ? "Change theme" : "Cambiar tema",
+        download: language === "English" ? "Download a PDF version" : "Descargar una versión en PDF",
+    };
+    
     useEffect(() => {
         if(theme === "Light")
         {
@@ -58,10 +65,10 @@ function Header()
     return (
         <div className={styles.Container}>
             <div className={styles.ButtonsContainer}>
-                <button onClick={handleChangeLanguage} className={styles.Button}>
+                <button onClick={handleChangeLanguage} className={styles.Button} title={titles.language}>
                     <IoLanguageOutline/>
                 </button>
-                <button onClick={handleChangeTheme} className={styles.Button}>
+                <button onClick={handleChangeTheme} className={styles.Button} title={titles.theme}>
                     {
                         theme === "Light" ? <IoMoonOutline/>
                         :
@@ -70,7 +77,7 @@ function Header()
                 </button>
             </div>
             
-            <img src={profileImg} alt="" />
+            <img src={profileImg} alt=""/>
             <h2>Juan Pablo Llorente</h2>
             
             <h4>
@@ -82,7 +89,7 @@ function Header()
             </h4>
             
             <a href="" download={""}>
-                <button className={styles.DownloadButton}>
+                <button className={styles.DownloadButton} title={titles.download}>
                 {
                     language === "English" ? "Download"
                     :

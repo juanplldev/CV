@@ -38,7 +38,13 @@ function Education()
             <ul>
                 <li>
                     <h4>
-                        <a href="https://www.soyhenry.com">Bootcamp Henry</a>
+                        <a href="https://www.soyhenry.com">
+                            {
+                                language === "English" ? "Henry Bootcamp"
+                                :
+                                "Bootcamp Henry"
+                            }
+                        </a>
                     </h4>
                     <h4>
                         {
@@ -52,7 +58,13 @@ function Education()
                 
                 <li>
                     <h4>
-                        <a href="https://edutin.com">Academia Edutin</a>
+                        <a href="https://edutin.com">
+                            {
+                                language === "English" ? "Edutin Academy"
+                                :
+                                "Academia Edutin"
+                            }
+                        </a>
                     </h4>
                     <h4>
                         {
