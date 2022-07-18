@@ -5,6 +5,10 @@ import ThemeContext from "../../contexts/ThemeContext";
 import LanguageContext from "../../contexts/LanguageContext";
 import {IoLanguageOutline, IoMoonOutline, IoSunnyOutline} from "react-icons/io5";
 import profileImg from "../../img/Profile Photo.jpeg";
+import LightEN from "../../PDF/LightEN/CV - Juan Pablo Llorente.pdf";
+import LightSP from "../../PDF/LightSP/CV - Juan Pablo Llorente.pdf";
+import DarkEN from "../../PDF/DarkEN/CV - Juan Pablo Llorente.pdf";
+import DarkSP from "../../PDF/DarkSP/CV - Juan Pablo Llorente.pdf";
 import lightStyles from "./LightHeader.module.css";
 import darkStyles from "./DarkHeader.module.css";
 
@@ -21,6 +25,25 @@ function Header()
         language: language === "English" ? "Change language" : "Cambiar idioma",
         theme: language === "English" ? "Change theme" : "Cambiar tema",
         download: language === "English" ? "Download a PDF version" : "Descargar una versión en PDF",
+    };
+    
+    let pdf;
+    
+    if(theme === "Light" && language === "English")
+    {
+        pdf = LightEN;
+    }
+    else if(theme === "Light" && language === "Español")
+    {
+        pdf = LightSP;
+    }
+    else if(theme === "Dark" && language === "English")
+    {
+        pdf = DarkEN;
+    }
+    else if(theme === "Dark" && language === "Español")
+    {
+        pdf = DarkSP;
     };
     
     useEffect(() => {
@@ -88,7 +111,7 @@ function Header()
                 }
             </h4>
             
-            <a href="" download={""}>
+            <a href={pdf} download="CV - Juan Pablo Llorente">
                 <button className={styles.DownloadButton} title={titles.download}>
                 {
                     language === "English" ? "Download"
