@@ -38,6 +38,26 @@ function Certificates()
             
             <ul>
                 <li>
+                    <a className={styles.Link} href="https://www.efset.org/cert/PzicRi">
+                        <span>
+                            {
+                                language === "English" ? "EF SET English Certificate"
+                                :
+                                "Certificado de Inglés EF SET"
+                            }
+                            <span className={styles.Month}>
+                                {
+                                    language === "English" ? " - August 2022"
+                                    :
+                                    " - Agosto 2022"
+                                }
+                            </span>
+                        </span>
+                        <BsArrowRightShort/>
+                    </a>
+                </li>
+                
+                <li>
                     <a className={styles.Link} href="https://certificates.soyhenry.com/cert?id=22f61cd9-03ee-4444-8822-53a5c289cd60">
                         <span>
                             {

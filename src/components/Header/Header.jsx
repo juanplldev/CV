@@ -1,14 +1,11 @@
 // Dependencies
 import React, {useContext, useEffect, useState} from "react";
+import html2pdf from "html2pdf.js";
 // Files
 import ThemeContext from "../../contexts/ThemeContext";
 import LanguageContext from "../../contexts/LanguageContext";
 import {IoLanguageOutline, IoMoonOutline, IoSunnyOutline} from "react-icons/io5";
 import profileImg from "../../img/Profile Photo.jpeg";
-import LightEN from "../../PDF/LightEN/CV - Juan Pablo Llorente.pdf";
-import LightSP from "../../PDF/LightSP/CV - Juan Pablo Llorente.pdf";
-import DarkEN from "../../PDF/DarkEN/CV - Juan Pablo Llorente.pdf";
-import DarkSP from "../../PDF/DarkSP/CV - Juan Pablo Llorente.pdf";
 import lightStyles from "./LightHeader.module.css";
 import darkStyles from "./DarkHeader.module.css";
 
@@ -25,25 +22,6 @@ function Header()
         language: language === "English" ? "Change language" : "Cambiar idioma",
         theme: language === "English" ? "Change theme" : "Cambiar tema",
         download: language === "English" ? "Download a PDF version" : "Descargar una versión en PDF",
-    };
-    
-    let pdf;
-    
-    if(theme === "Light" && language === "English")
-    {
-        pdf = LightEN;
-    }
-    else if(theme === "Light" && language === "Español")
-    {
-        pdf = LightSP;
-    }
-    else if(theme === "Dark" && language === "English")
-    {
-        pdf = DarkEN;
-    }
-    else if(theme === "Dark" && language === "Español")
-    {
-        pdf = DarkSP;
     };
     
     useEffect(() => {
@@ -85,6 +63,37 @@ function Header()
         };
     };
     
+    function handleDownloadPDF()
+    {
+        const element = document.getElementById("HomeContainer");
+        const optitons =
+        {
+            margin: 0,
+            filename: "CV - Juan Pablo Llorente",
+            image:
+            {
+                type: "jpeg",
+                quality: 0.98,
+            },
+            html2canvas:
+            {
+                scale: 2,
+            },
+            hotfixes:
+            [
+                "px_scaling",
+            ],
+            jsPDF:
+            {
+                unit: "px",
+                format: language === "English" ? [1000, 1390] : [1000, 1440],
+                orientation: "portrait",
+            },
+        };
+        
+        html2pdf(element, optitons);
+    };
+    
     return (
         <div className={styles.Container}>
             <div className={styles.ButtonsContainer}>
@@ -111,15 +120,13 @@ function Header()
                 }
             </h4>
             
-            <a href={pdf} download="CV - Juan Pablo Llorente">
-                <button className={styles.DownloadButton} title={titles.download}>
-                {
-                    language === "English" ? "Download"
-                    :
-                    "Descargar"
-                }
-                </button>
-            </a>
+            <button onClick={handleDownloadPDF} className={styles.DownloadButton} title={titles.download}>
+            {
+                language === "English" ? "Download"
+                :
+                "Descargar"
+            }
+            </button>
         </div>
     );
 };

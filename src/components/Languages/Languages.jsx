@@ -63,9 +63,9 @@ function Languages()
                     </span>
                     <span className={styles.Level}>
                         {
-                            language === "English" ? "Intermediate."
+                            language === "English" ? "C1 Advanced."
                             :
-                            "Intermedio."
+                            "C1 Avanzado."
                         }
                     </span>
                 </li>

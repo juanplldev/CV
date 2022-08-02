@@ -36,7 +36,7 @@ function Home()
     }, [theme]);
     
     return (
-        <div className={styles.Container}>
+        <div className={styles.Container} id="HomeContainer">
             <div className={styles.LeftSide}>
                 <Header/>
                 <Contact/>
