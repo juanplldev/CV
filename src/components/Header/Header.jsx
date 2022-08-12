@@ -4,6 +4,7 @@ import html2pdf from "html2pdf.js";
 // Files
 import ThemeContext from "../../contexts/ThemeContext";
 import LanguageContext from "../../contexts/LanguageContext";
+import DownloadContext from "../../contexts/DownloadContext";
 import {IoLanguageOutline, IoMoonOutline, IoSunnyOutline} from "react-icons/io5";
 import profileImg from "../../img/Profile Photo.jpeg";
 import lightStyles from "./LightHeader.module.css";
@@ -14,6 +15,7 @@ function Header()
 {
     const {language, setLanguage} = useContext(LanguageContext);
     const {theme, setTheme} = useContext(ThemeContext);
+    const {download, setDownload} = useContext(DownloadContext);
     
     const [styles, setStyles] = useState(theme === "Light" ? lightStyles : darkStyles);
     
@@ -63,8 +65,10 @@ function Header()
         };
     };
     
-    function handleDownloadPDF()
+    async function handleDownloadPDF()
     {
+        await setDownload(true);
+        
         const element = document.getElementById("HomeContainer");
         const optitons =
         {
@@ -91,23 +95,29 @@ function Header()
             },
         };
         
-        html2pdf(element, optitons);
+        await html2pdf(element, optitons);
+        await setDownload(false);
     };
     
     return (
         <div className={styles.Container}>
-            <div className={styles.ButtonsContainer}>
-                <button onClick={handleChangeLanguage} className={styles.Button} title={titles.language}>
-                    <IoLanguageOutline/>
-                </button>
-                <button onClick={handleChangeTheme} className={styles.Button} title={titles.theme}>
-                    {
-                        theme === "Light" ? <IoMoonOutline/>
-                        :
-                        <IoSunnyOutline/>
-                    }
-                </button>
-            </div>
+            {
+                download === false ?
+                <div className={styles.ButtonsContainer}>
+                    <button onClick={handleChangeLanguage} className={styles.Button} title={titles.language}>
+                        <IoLanguageOutline/>
+                    </button>
+                    <button onClick={handleChangeTheme} className={styles.Button} title={titles.theme}>
+                        {
+                            theme === "Light" ? <IoMoonOutline/>
+                            :
+                            <IoSunnyOutline/>
+                        }
+                    </button>
+                </div>
+                :
+                null
+            }
             
             <img src={profileImg} alt=""/>
             <h2>Juan Pablo Llorente</h2>
@@ -120,13 +130,18 @@ function Header()
                 }
             </h4>
             
-            <button onClick={handleDownloadPDF} className={styles.DownloadButton} title={titles.download}>
             {
-                language === "English" ? "Download"
+                download === false ?
+                <button onClick={handleDownloadPDF} className={styles.DownloadButton} title={titles.download}>
+                {
+                    language === "English" ? "Download"
+                    :
+                    "Descargar"
+                }
+                </button>
                 :
-                "Descargar"
+                null
             }
-            </button>
         </div>
     );
 };

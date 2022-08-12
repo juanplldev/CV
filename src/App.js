@@ -5,6 +5,7 @@ import {Route, Routes} from "react-router-dom";
 import Home from "./components/Home/Home.jsx";
 import {ThemeContext} from "./contexts/ThemeContext.jsx";
 import {LanguageContext} from "./contexts/LanguageContext.jsx";
+import {DownloadContext} from "./contexts/DownloadContext.jsx";
 import "./App.css";
 
 
@@ -14,9 +15,11 @@ function App()
         <React.Fragment>
             <ThemeContext>
                 <LanguageContext>
-                    <Routes>
-                        <Route exact path="/" element={<Home/>} />
-                    </Routes>
+                    <DownloadContext>
+                        <Routes>
+                            <Route exact path="/" element={<Home/>} />
+                        </Routes>
+                    </DownloadContext>
                 </LanguageContext>
             </ThemeContext>
         </React.Fragment>

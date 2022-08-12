@@ -11,6 +11,7 @@ import Certificates from "../Certificates/Certificates";
 import Skills from "../Skills/Skills";
 import Interests from "../Interests/Interests";
 import ThemeContext from "../../contexts/ThemeContext";
+import DownloadContext from "../../contexts/DownloadContext";
 import {scrollToTop} from "../../handlers/handlers";
 import {AiOutlineArrowUp} from "react-icons/ai";
 import lightStyles from "./LightHome.module.css";
@@ -20,6 +21,7 @@ import darkStyles from "./DarkHome.module.css";
 function Home()
 {
     const {theme} = useContext(ThemeContext);
+    const {download} = useContext(DownloadContext);
     const [styles, setStyles] = useState(theme === "Light" ? lightStyles : darkStyles);
     
     useEffect(() => {
@@ -36,7 +38,7 @@ function Home()
     }, [theme]);
     
     return (
-        <div className={styles.Container} id="HomeContainer">
+        <div className={download ? styles.DownloadContainer : styles.Container} id="HomeContainer">
             <div className={styles.LeftSide}>
                 <Header/>
                 <Contact/>
@@ -52,7 +54,7 @@ function Home()
                 <Skills/>
             </div>
             
-            <button onClick={scrollToTop} className={styles.ArrowButton}>
+            <button onClick={scrollToTop} className={download ? styles.DownloadArrowButton : styles.ArrowButton}>
                 <AiOutlineArrowUp/>
             </button>
         </div>

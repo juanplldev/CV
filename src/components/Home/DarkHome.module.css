@@ -1,3 +1,17 @@
+.DownloadContainer
+{
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    width: auto;
+    max-width: 1000px;
+    min-height: 1000px;
+    max-height: 1440px;
+    /* margin: 50px; */
+    box-shadow: 2px 0 10px rgba(255, 255, 255, 0.15);
+    transition: 0.5s;
+}
+
 .Container
 {
     position: relative;
@@ -25,6 +39,11 @@
     position: relative;
     background: #212121;
     padding: 40px;
+}
+
+.DownloadArrowButton
+{
+    display: none;
 }
 
 .ArrowButton
