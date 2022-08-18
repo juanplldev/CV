@@ -69,10 +69,10 @@ function Contact()
                 
                 <li>
                     <span className={styles.Icon}>
-                        <a href="https://www.linkedin.com/in/juan-pablo-llorente"><BsLinkedin/></a>
+                        <a href="https://www.linkedin.com/in/juanpll"><BsLinkedin/></a>
                     </span>
                     <span className={styles.Text}>
-                        <a href="https://www.linkedin.com/in/juan-pablo-llorente">Juan-Pablo-Llorente</a>
+                        <a href="https://www.linkedin.com/in/juanpll">JuanPll</a>
                     </span>
                 </li>
                 
