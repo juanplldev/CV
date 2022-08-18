@@ -87,10 +87,10 @@ function Contact()
                 
                 <li>
                     <span className={styles.Icon}>
-                        <a href="https://juanpablollorente.vercel.app"><BsBriefcase/></a>
+                        <a href="https://juanpll.vercel.app"><BsBriefcase/></a>
                     </span>
                     <span className={styles.Text}>
-                        <a href="https://juanpablollorente.vercel.app">
+                        <a href="https://juanpll.vercel.app">
                             {
                                 language === "English" ? "Portfolio"
                                 :
