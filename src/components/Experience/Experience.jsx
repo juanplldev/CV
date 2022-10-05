@@ -38,6 +38,41 @@ function Experience()
             <div className={styles.Job}>
                 <h3>
                     {
+                        language === "English" ? "Full Stack Developer"
+                        :
+                        "Desarrollador Full Stack"
+                    }
+                </h3>
+                
+                <div className={styles.Details}>
+                    <h4>
+                        {
+                            language === "English" ? "Personal project"
+                            :
+                            "Proyecto personal"
+                        }
+                    </h4>
+                    <h5>
+                        {
+                            language === "English" ? "Sept. 2022 - October 2022"
+                            :
+                            "Sept. 2022 - Octubre 2022"
+                        }
+                    </h5>
+                </div>
+                
+                <p>
+                    {
+                        language === "English" ? "An app to see the crypto prices, made for practice."
+                        :
+                        "Una aplicación para ver los precios de las criptomonedas, hecha para practicar."
+                    }
+                </p>
+            </div>
+            
+            <div className={styles.Job}>
+                <h3>
+                    {
                         language === "English" ? "Full Stack Web Developer"
                         :
                         "Desarrollador Web Full Stack"
@@ -128,7 +163,7 @@ function Experience()
                 </p>
             </div>
             
-            <div className={styles.Job}>
+            {/* <div className={styles.Job}>
                 <h3>
                     {
                         language === "English" ? "AutoCAD Draftsman"
@@ -155,7 +190,7 @@ function Experience()
                         "Dibujado de planos municipales."
                     }
                 </p>
-            </div>
+            </div> */}
         </div>
     );
 };

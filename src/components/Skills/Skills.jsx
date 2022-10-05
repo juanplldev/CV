@@ -46,6 +46,8 @@ function Skills()
                 <li>PostgreSQL</li>
                 <li>Sequelize</li>
                 <li>Git</li>
+                <li>React Native</li>
+                <li>Expo</li>
             </ul>
         </div>
     );
