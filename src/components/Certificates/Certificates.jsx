@@ -38,7 +38,7 @@ function Certificates()
             
             <ul>
                 <li>
-                    <a className={styles.Link} href="https://www.efset.org/cert/PzicRi">
+                    <a className={styles.Link} href="https://www.efset.org/cert/PzicRi" target="_blank" rel="noopener noreferrer">
                         <span>
                             {
                                 language === "English" ? "EF SET English Certificate"
@@ -58,7 +58,7 @@ function Certificates()
                 </li>
                 
                 <li>
-                    <a className={styles.Link} href="https://certificates.soyhenry.com/cert?id=22f61cd9-03ee-4444-8822-53a5c289cd60">
+                    <a className={styles.Link} href="https://certificates.soyhenry.com/cert?id=22f61cd9-03ee-4444-8822-53a5c289cd60" target="_blank" rel="noopener noreferrer">
                         <span>
                             {
                                 language === "English" ? "Full Stack Web Developer"
@@ -78,7 +78,7 @@ function Certificates()
                 </li>
                 
                 <li>
-                    <a className={styles.Link} href="https://edutin.com/certifications/view/4490855">
+                    <a className={styles.Link} href="https://edutin.com/certifications/view/4490855" target="_blank" rel="noopener noreferrer">
                         <span>
                             {
                                 language === "English" ? "Computer Security"
@@ -97,7 +97,7 @@ function Certificates()
                     </a>
                 </li>
                 <li>
-                    <a className={styles.Link} href="https://edutin.com/certifications/view/3955381">
+                    <a className={styles.Link} href="https://edutin.com/certifications/view/3955381" target="_blank" rel="noopener noreferrer">
                         <span>
                             {
                                 language === "English" ? "Mobile Phone Repair and Maintenance"
@@ -116,7 +116,7 @@ function Certificates()
                     </a>
                 </li>
                 <li>
-                    <a className={styles.Link} href="https://edutin.com/certifications/view/3955352">
+                    <a className={styles.Link} href="https://edutin.com/certifications/view/3955352" target="_blank" rel="noopener noreferrer">
                         <span>
                             {
                                 language === "English" ? "Fundamentals in Computer Science"
@@ -135,7 +135,7 @@ function Certificates()
                     </a>
                 </li>
                 <li>
-                    <a className={styles.Link} href="https://edutin.com/certifications/view/3874632">
+                    <a className={styles.Link} href="https://edutin.com/certifications/view/3874632" target="_blank" rel="noopener noreferrer">
                         <span>
                             {
                                 language === "English" ? "Introduction to C"

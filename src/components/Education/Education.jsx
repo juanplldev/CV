@@ -38,7 +38,7 @@ function Education()
             <ul>
                 <li>
                     <h4>
-                        <a href="https://www.soyhenry.com">
+                        <a href="https://www.soyhenry.com" target="_blank" rel="noopener noreferrer">
                             {
                                 language === "English" ? "Henry Bootcamp"
                                 :
@@ -58,7 +58,7 @@ function Education()
                 
                 <li>
                     <h4>
-                        <a href="https://edutin.com">
+                        <a href="https://edutin.com" target="_blank" rel="noopener noreferrer">
                             {
                                 language === "English" ? "Edutin Academy"
                                 :
@@ -78,7 +78,7 @@ function Education()
                 
                 <li>
                     <h4>
-                        <a href="http://www.escuelaraggio.edu.ar">
+                        <a href="http://www.escuelaraggio.edu.ar" target="_blank" rel="noopener noreferrer">
                             {
                                 language === "English" ? "Raggio Technical School"
                                 :

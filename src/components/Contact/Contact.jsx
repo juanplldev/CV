@@ -42,55 +42,55 @@ function Contact()
             <ul>
                 <li>
                     <span className={styles.Icon}>
-                        <a href="https://goo.gl/maps/9MGzKshhYSS3L7977"><BiMap/></a>
+                        <a href="https://goo.gl/maps/9MGzKshhYSS3L7977" target="_blank" rel="noopener noreferrer"><BiMap/></a>
                     </span>
                     <span className={styles.Text}>
-                        <a href="https://goo.gl/maps/9MGzKshhYSS3L7977">Buenos Aires, Argentina</a>
+                        <a href="https://goo.gl/maps/9MGzKshhYSS3L7977" target="_blank" rel="noopener noreferrer">Buenos Aires, Argentina</a>
                     </span>
                 </li>
                 
                 <li>
                     <span className={styles.Icon}>
-                        <a href="mailto:juanpablollorentej@gmail.com"><FiMail/></a>
+                        <a href="mailto:juanpablollorentej@gmail.com" target="_blank" rel="noopener noreferrer"><FiMail/></a>
                     </span>
                     <span className={styles.Text}>
-                        <a href="mailto:juanpablollorentej@gmail.com">juanpablollorentej@gmail.com</a>
+                        <a href="mailto:juanpablollorentej@gmail.com" target="_blank" rel="noopener noreferrer">juanpablollorentej@gmail.com</a>
                     </span>
                 </li>
                 
                 <li>
                     <span className={styles.Icon}>
-                        <a href="https://wa.me/541133365620"><FaWhatsapp/></a>
+                        <a href="https://wa.me/541133365620" target="_blank" rel="noopener noreferrer"><FaWhatsapp/></a>
                     </span>
                     <span className={styles.Text}>
-                        <a href="https://wa.me/541133365620">+54 11 3336-5620</a>
+                        <a href="https://wa.me/541133365620" target="_blank" rel="noopener noreferrer">+54 11 3336-5620</a>
                     </span>
                 </li>
                 
                 <li>
                     <span className={styles.Icon}>
-                        <a href="https://www.linkedin.com/in/juanpll"><BsLinkedin/></a>
+                        <a href="https://www.linkedin.com/in/juanpll" target="_blank" rel="noopener noreferrer"><BsLinkedin/></a>
                     </span>
                     <span className={styles.Text}>
-                        <a href="https://www.linkedin.com/in/juanpll">JuanPll</a>
+                        <a href="https://www.linkedin.com/in/juanpll" target="_blank" rel="noopener noreferrer">JuanPll</a>
                     </span>
                 </li>
                 
                 <li>
                     <span className={styles.Icon}>
-                        <a href="https://github.com/JuanPablo-Llorente"><BsGithub/></a>
+                        <a href="https://github.com/JuanPablo-Llorente" target="_blank" rel="noopener noreferrer"><BsGithub/></a>
                     </span>
                     <span className={styles.Text}>
-                        <a href="https://github.com/JuanPablo-Llorente">JuanPablo-Llorente</a>
+                        <a href="https://github.com/JuanPablo-Llorente" target="_blank" rel="noopener noreferrer">JuanPablo-Llorente</a>
                     </span>
                 </li>
                 
                 <li>
                     <span className={styles.Icon}>
-                        <a href="https://juanpll.vercel.app"><BsBriefcase/></a>
+                        <a href="https://juanpll.vercel.app" target="_blank" rel="noopener noreferrer"><BsBriefcase/></a>
                     </span>
                     <span className={styles.Text}>
-                        <a href="https://juanpll.vercel.app">
+                        <a href="https://juanpll.vercel.app" target="_blank" rel="noopener noreferrer">
                             {
                                 language === "English" ? "Portfolio"
                                 :
