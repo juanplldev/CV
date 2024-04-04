@@ -78,10 +78,10 @@ function Contact()
                 
                 <li>
                     <span className={styles.Icon}>
-                        <a href="https://github.com/JuanPablo-Llorente" target="_blank" rel="noopener noreferrer"><BsGithub/></a>
+                        <a href="https://github.com/juanplldev" target="_blank" rel="noopener noreferrer"><BsGithub/></a>
                     </span>
                     <span className={styles.Text}>
-                        <a href="https://github.com/JuanPablo-Llorente" target="_blank" rel="noopener noreferrer">JuanPablo-Llorente</a>
+                        <a href="https://github.com/juanplldev" target="_blank" rel="noopener noreferrer">juanplldev</a>
                     </span>
                 </li>
                 
