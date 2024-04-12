@@ -78,7 +78,7 @@ function Certificates()
                 </li>
                 
                 <li>
-                    <a className={styles.Link} href="https://edutin.com/certifications/view/4490855" target="_blank" rel="noopener noreferrer">
+                    <a className={styles.Link} href="https://app.edutin.com/verify/4490855" target="_blank" rel="noopener noreferrer">
                         <span>
                             {
                                 language === "English" ? "Computer Security"
@@ -97,7 +97,7 @@ function Certificates()
                     </a>
                 </li>
                 <li>
-                    <a className={styles.Link} href="https://edutin.com/certifications/view/3955381" target="_blank" rel="noopener noreferrer">
+                    <a className={styles.Link} href="https://app.edutin.com/verify/3955381" target="_blank" rel="noopener noreferrer">
                         <span>
                             {
                                 language === "English" ? "Mobile Phone Repair and Maintenance"
@@ -116,7 +116,7 @@ function Certificates()
                     </a>
                 </li>
                 <li>
-                    <a className={styles.Link} href="https://edutin.com/certifications/view/3955352" target="_blank" rel="noopener noreferrer">
+                    <a className={styles.Link} href="https://app.edutin.com/verify/3955352" target="_blank" rel="noopener noreferrer">
                         <span>
                             {
                                 language === "English" ? "Fundamentals in Computer Science"
@@ -135,7 +135,7 @@ function Certificates()
                     </a>
                 </li>
                 <li>
-                    <a className={styles.Link} href="https://edutin.com/certifications/view/3874632" target="_blank" rel="noopener noreferrer">
+                    <a className={styles.Link} href="https://app.edutin.com/verify/3874632" target="_blank" rel="noopener noreferrer">
                         <span>
                             {
                                 language === "English" ? "Introduction to C"

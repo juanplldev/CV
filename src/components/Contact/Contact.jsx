@@ -72,7 +72,7 @@ function Contact()
                         <a href="https://www.linkedin.com/in/juanpll" target="_blank" rel="noopener noreferrer"><BsLinkedin/></a>
                     </span>
                     <span className={styles.Text}>
-                        <a href="https://www.linkedin.com/in/juanpll" target="_blank" rel="noopener noreferrer">JuanPll</a>
+                        <a href="https://www.linkedin.com/in/juanpll" target="_blank" rel="noopener noreferrer">juanpll</a>
                     </span>
                 </li>
                 

@@ -90,7 +90,7 @@ function Header()
             jsPDF:
             {
                 unit: "px",
-                format: language === "English" ? [1000, 1420] : [1000, 1495],
+                format: language === "English" ? [1000, 1420] : [1000, 1470],
                 orientation: "portrait",
             },
         };

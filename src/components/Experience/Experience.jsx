@@ -38,6 +38,41 @@ function Experience()
             <div className={styles.Job}>
                 <h3>
                     {
+                        language === "English" ? "Full Stack Web Developer"
+                        :
+                        "Desarrollador Web Full Stack"
+                    }
+                </h3>
+                
+                <div className={styles.Details}>
+                    <h4>
+                        {
+                            language === "English" ? "Personal project"
+                            :
+                            "Proyecto personal"
+                        }
+                    </h4>
+                    <h5>
+                        {
+                            language === "English" ? "Feb. 2024 - Apr. 2024"
+                            :
+                            "Feb. 2024 - Abr. 2024"
+                        }
+                    </h5>
+                </div>
+                
+                <p>
+                    {
+                        language === "English" ? "Made a personal file server with an UI to manage it."
+                        :
+                        "Hice un servidor de archivos personal con una interfaz de usuario para administrarlo."
+                    }
+                </p>
+            </div>
+
+            <div className={styles.Job}>
+                <h3>
+                    {
                         language === "English" ? "Full Stack Developer"
                         :
                         "Desarrollador Full Stack"
@@ -54,18 +89,18 @@ function Experience()
                     </h4>
                     <h5>
                         {
-                            language === "English" ? "Sept. 2022 - October 2022"
+                            language === "English" ? "Sep. 2022 - Oct. 2022"
                             :
-                            "Sept. 2022 - Octubre 2022"
+                            "Sep. 2022 - Oct. 2022"
                         }
                     </h5>
                 </div>
                 
                 <p>
                     {
-                        language === "English" ? "An app to see the crypto prices, made for practice."
+                        language === "English" ? "Made an app to see the crypto prices."
                         :
-                        "Una aplicación para ver los precios de las criptomonedas, hecha para practicar."
+                        "Hice una aplicación para ver los precios de las criptomonedas."
                     }
                 </p>
             </div>
@@ -83,53 +118,20 @@ function Experience()
                     <h4>Henry</h4>
                     <h5>
                         {
-                            language === "English" ? "May 2022 - June 2022"
+                            language === "English" ? "May 2022 - Jun. 2022"
                             :
-                            "Mayo 2022 - Junio 2022"
+                            "May. 2022 - Jun. 2022"
                         }
                     </h5>
                 </div>
                 
                 <p>
                     {
-                        language === "English" ? "An digital art e-commerce with a small social network system."
+                        language === "English" ? `Made a digital art e-commerce with a small social network system
+                        with six more co-workers as final project.`
                         :
-                        "Un comercio de arte digital con un toque de red social."
-                    }
-                    <br />
-                    {
-                        language === "English" ? "Made with six more co-workers as final project."
-                        :
-                        "Realizado con seis compañeros más, como proyecto final."
-                    }
-                </p>
-            </div>
-            
-            <div className={styles.Job}>
-                <h3>
-                    {
-                        language === "English" ? "Full Stack Web Developer"
-                        :
-                        "Desarrollador Web Full Stack"
-                    }
-                </h3>
-                
-                <div className={styles.Details}>
-                    <h4>Henry</h4>
-                    <h5>
-                        {
-                            language === "English" ? "April 2022 - May 2022"
-                            :
-                            "Abril 2022 - Mayo 2022"
-                        }
-                    </h5>
-                </div>
-                
-                <p>
-                    {
-                        language === "English" ? "A SPA (Single Page Application) of a video games encyclopedia."
-                        :
-                        "Una aplicación de una sola página sobre una enciclopedia de videojuegos."
+                        `Hice una pagina para el comercio de arte digital con un añadido de red social
+                        con seis compañeros más, como proyecto final.`
                     }
                 </p>
             </div>
@@ -147,9 +149,9 @@ function Experience()
                     <h4>ABEM</h4>
                     <h5>
                         {
-                            language === "English" ? "March 2022 - April 2022"
+                            language === "English" ? "Mar. 2022 - Apr. 2022"
                             :
-                            "Marzo 2022 - Abril 2022"
+                            "Mar. 2022 - Abr. 2022"
                         }
                     </h5>
                 </div>
@@ -176,9 +178,9 @@ function Experience()
                     <h4>MT Arquitectura</h4>
                     <h5>
                         {
-                            language === "English" ? "Sept. 2020 - August 2021"
+                            language === "English" ? "Sep. 2020 - Aug. 2021"
                             :
-                            "Sept. 2020 - Agosto 2021"
+                            "Sep. 2020 - Ago. 2021"
                         }
                     </h5>
                 </div>
